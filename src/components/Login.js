@@ -22,15 +22,17 @@ function Login() {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <label>Email : </label>
+        <label htmlFor="email">Email : </label>
         <input
+          id="email"
           type="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
         />
-        <label>Password : </label>
+        <label htmlFor="password">Password : </label>
         <input
+          id="password"
           type="password"
           name="password"
           value={formData.password}
