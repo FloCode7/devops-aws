@@ -3,4 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t form-app -f Dockerfile.dev .
+  - docker build -t devops/form-app -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true devops/form-app npm run test
