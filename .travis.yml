@@ -1,4 +1,5 @@
 sudo: required
+language: generic
 services:
   - docker
 
@@ -7,3 +8,12 @@ before_install:
 
 script:
   - docker run -e CI=true form-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: 3WA
+  env: "3WA-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-183295422611"
+  on:
+    branch: main
