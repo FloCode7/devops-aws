@@ -13,3 +13,5 @@ test("renders login component", () => {
   expect(emailInput.value).toBe("test@gmail.com");
   expect(passwordInput.value).toBe("onepassword");
 });
+
+// fsg
